@@ -1,0 +1,17 @@
+{
+  "name": "first-uni-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "copy-webpack-plugin": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/uni-app": "^1.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
