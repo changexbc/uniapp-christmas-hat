@@ -55,6 +55,7 @@
             "urlCheck" : true,
             "minified" : true
         },
+		"style":"v2",
         "usingComponents" : true,
         "permission" : {}
     },

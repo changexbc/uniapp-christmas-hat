@@ -7,7 +7,7 @@
 					@touchstart='handleTouchStart' 
 					@touchmove.stop='handleTouchMove' 
 					:style='hatStyleStr'>
-					<image class='hat' id='hat' src='https://static-1258058493.cos.ap-shanghai.myqcloud.com/hat.png' :style='hatImgStyleStr'></image>
+					<image class='hat' id='hat' src='/static/img/hat.png' :style='hatImgStyleStr'></image>
 					<view class='rotate' id='rotate' :style='rotateStyleStr'>
 						<image class='rotate-icon' id='rotate' src='/static/img/icon-rotate.png'></image>
 					</view>
@@ -68,7 +68,7 @@
 			}
 		},
 		computed:{
-			...mapState(['forcedLogin', 'hasLogin', 'openId', 'userInfo']),
+			...mapState(['openId', 'userInfo']),
 			avatarHd(){
 				if(this.imgUrl) return this.imgUrl
 				if(this.userInfo.avatarUrl){
@@ -199,7 +199,6 @@
 						data: {},
 						success: res => {
 							console.log('[云函数] [login] user openid: ', res.result.openid);
-							// app.globalData.openid = res.result.openid;
 							this.setOpenId(res.result.openid);
 							console.log(this.openId)
 						},
@@ -250,7 +249,7 @@
 				context.translate(this.hatLeft + this.hatHalfWidth,this.hatTop + this.hatHalfWidth)
 				context.rotate(this.hatRotate * Math.PI / 180)
 				console.log(-hatSize/2)
-				context.drawImage("https://static-1258058493.cos.ap-shanghai.myqcloud.com/hat.png", -hatSize/2, -hatSize/2, hatSize, hatSize)
+				context.drawImage("/static/img/hat.png", -hatSize/2, -hatSize/2, hatSize, hatSize)
 				context.draw()
 				uni.hideLoading()
 			},
@@ -309,11 +308,6 @@
 						//#endif
 					} 
 				})
-				// uni.authorize({
-				// 	scope: 'scope.writePhotosAlbum',
-				// 	success:()=> {
-				// 	}
-				// })
 			}
 		}
 	}
