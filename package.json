@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
-    "copy-webpack-plugin": "^5.1.1"
+    "copy-webpack-plugin": "^11.0.0"
   },
   "devDependencies": {
     "@types/uni-app": "^1.4.1"
